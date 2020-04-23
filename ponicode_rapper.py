@@ -38,7 +38,7 @@ class Rapper:
             os.makedirs('all_lyrics')
             with open(self.all_lyrics_path, 'w') as f:
                 f.write(texts)
-            return texts
+        return texts
 
     def download_model(self):
         return gpt2.download_gpt2(model_name=self.model_name)
