@@ -1,2 +1,4 @@
 .ipynb_checkpoints/
 *.ipynb
+__pycache__/
+all_lyrics/

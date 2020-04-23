@@ -1,5 +1,5 @@
 import os
-import gpt_2_simple as gpt2
+#import gpt_2_simple as gpt2
 
 class Rapper:
     """Ponicode Rapper generates lyrics by training on rap songs"""
@@ -36,8 +36,8 @@ class Rapper:
         self.all_lyrics_path = 'all_lyrics/all_lyrics.txt'
         if not os.path.exists('all_lyrics'):
             os.makedirs('all_lyrics')
-            with open(self.all_lyrics_path, 'w') as f:
-                f.write(texts)
+        with open(self.all_lyrics_path, 'w') as f:
+            f.write(texts)
         return texts
 
     def download_model(self):
