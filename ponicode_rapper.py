@@ -2,7 +2,7 @@ import os
 import gpt_2_simple as gpt2
 
 class Rapper:
-  """Ponicode Rapper generates lyrics by training on rap songs"""
+    """Ponicode Rapper generates lyrics by training on rap songs"""
 
     def __init__(self):
         self.model_name = '124M'
