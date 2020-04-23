@@ -1,5 +1,5 @@
 import os
-#import gpt_2_simple as gpt2
+import gpt_2_simple as gpt2
 
 class Rapper:
     """Ponicode Rapper generates lyrics by training on rap songs"""
