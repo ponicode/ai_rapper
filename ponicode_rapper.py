@@ -1,10 +1,11 @@
 import os
-import gpt_2_simple as gpt2
 
 class Rapper:
     """Ponicode Rapper generates lyrics by training on rap songs"""
 
     def __init__(self):
+        import gpt_2_simple as gpt2
+        self.gpt2 = gpt2
         self.model_name = '124M'
         self.steps = 500
         self.run_name = 'rap'
@@ -41,11 +42,11 @@ class Rapper:
         return texts
 
     def download_model(self):
-        return gpt2.download_gpt2(model_name=self.model_name)
+        return self.gpt2.download_gpt2(model_name=self.model_name)
 
     def train(self, lyrics_paths):
-        self.sess = gpt2.start_tf_sess()
-        gpt2.finetune(self.sess,
+        self.sess = self.gpt2.start_tf_sess()
+        self.gpt2.finetune(self.sess,
                       dataset=lyrics_paths,
                       model_name=self.model_name,
                       steps=self.steps,
@@ -57,4 +58,4 @@ class Rapper:
                       )
     
     def generate_lyrics(self):
-        return gpt2.generate(self.sess, self.run_name)
+        return self.gpt2.generate(self.sess, self.run_name)
