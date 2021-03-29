@@ -233,7 +233,7 @@ pycrypto==2.6.1
 pycurl==7.43.0.2
 pyemd==0.5.1
 pyflakes==2.1.1
-Pygments==2.5.2
+Pygments==2.7.4
 PyHive==0.5.1
 pylint==2.4.4
 PyMeeus==0.3.7
